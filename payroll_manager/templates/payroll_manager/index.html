@@ -1,0 +1,24 @@
+{% extends 'payroll_manager/base.html' %}
+{% block logbtn %}
+<a class="btn btn-primary" href="{% url 'admin_login' %}" role="button" style="margin-left: 70%">Admin</a>
+<a class="btn btn-primary" href="{% url 'employee_login' %}" role="button" style="margin-left: 40px">Employee</a>
+{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+<div {% if message.tags %} {% endif %} class="alert alert-danger">{{ message }}</div>
+{% endfor %}
+{% endif %}
+<div class="jumbotron" style="margin-top: 15%;text-align: center;">
+    <h1 class="display-4">Welcome to SSV Payroll Manager</h1>
+    <p class="lead">To continue either login as admin or employee</p>
+    <hr class="my-4">  
+</div>
+<iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    style="position: absolute; right: 0;"
+    src="https://console.dialogflow.com/api-client/demo/embedded/0dab367c-29c3-4b9e-854a-99f7c6e8d589">
+</iframe>
+{% endblock %}
