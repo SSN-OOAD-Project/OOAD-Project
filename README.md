@@ -26,7 +26,7 @@ A company payroll management system made with Django and MySQL which lets the ad
   ```
   python manage.py makemigrations
   python manage.py migrate
-  python populate_user.py #To make dummy employee and admin account
+  python populate_user.py #To make dummy employee and admin accounts
   ```
 * run [populate_table](https://github.com/chirayurathi/payroll_management_system/blob/main/populate_table.sql) SQL script in mysql
 * Finally on cmd run,
